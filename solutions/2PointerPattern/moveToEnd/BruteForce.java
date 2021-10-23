@@ -15,11 +15,11 @@ public class BruteForce {
 	public int[] moveTargetElementToEnd(int[] arr, int targetElement) {
 		int n = arr.length;
 		int[] result = new int[n];
-	
+
 		int ptr = 0;
 		int resPtr = 0;
 
-		while(ptr<n) {
+		while(ptr < n) {
 			if (arr[ptr] == targetElement) {
 				ptr++;
 				continue;
@@ -29,11 +29,11 @@ public class BruteForce {
 			ptr++;
 		}
 
-		while(resPtr<n) {
+		while(resPtr < n) {
 			result[resPtr] = targetElement;
 			resPtr++;
 		}
-		return result;
+		
+		return result;	
 	}
-	
 }
