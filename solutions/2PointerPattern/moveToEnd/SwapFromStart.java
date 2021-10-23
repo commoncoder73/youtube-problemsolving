@@ -1,7 +1,7 @@
 import java.util.*;
 
-//time comp - 
-//space comp - 
+//time comp - O(N)
+//space comp - O(1)
 public class SwapFromStart {
 	
 	public static void main(String...args) {
@@ -13,7 +13,25 @@ public class SwapFromStart {
 	}
 
 	public int[] moveTargetElementToEnd(int[] arr, int targetElement) {
+		int n = arr.length;
+		int i = 0;
+		int j = n-1;
 		
+		while(i<j) {
+			if (arr[i] != targetElement) {
+				i++;
+				continue;
+			}
+			swap(arr, i, j);
+			j--;
+		}
+		return arr;
+	}
+
+	private void swap(int[] arr, int i, int j) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 	
 }
